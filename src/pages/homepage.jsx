@@ -9,7 +9,7 @@ const HomePage = () => {
         <>
             <Hero title='React Course Hub' description='Explore the World of React Development' />
             <CardContainer />
-            <CourseListContainer />
+            <CourseListContainer isHome={true} />
             <ViewAllCourse />
         </>
     )

@@ -1,5 +1,6 @@
 import { useState } from "react";
-import {FaMapMarker} from 'react-icons/fa';
+import { FaMapMarker } from 'react-icons/fa';
+import { Link } from 'react-router-dom'
 
 const CourseList = ({ course }) => {
 
@@ -19,7 +20,7 @@ const CourseList = ({ course }) => {
 
                     <div className="mb-5">{description}</div>
 
-                    <button 
+                    <button
                         onClick={() => setShowFullDescription((prevState) => !prevState)}
                         className="text-red-400 mb-2 hover:text-red-700">
                         {!showFullDescription ? 'More' : 'Less'}
@@ -34,12 +35,12 @@ const CourseList = ({ course }) => {
                             {course.location}
                         </div>
 
-                        <a
-                            href="/add-course"
+                        <Link
+                            to="/add-course"
                             className={`inline-block bg-red-500 text-white rounded-lg px-4 py-2 hover:bg-red-600`}
                         >
                             Read More
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

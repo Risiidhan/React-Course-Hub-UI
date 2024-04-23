@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const RoleCard = (role) => {
     return (
         <>
@@ -6,12 +8,12 @@ const RoleCard = (role) => {
                 <p className="mt-2 mb-4">
                     {role.description}
                 </p>
-                <a
-                    href="/add-course"
+                <Link
+                    to="/add-course"
                     className={`inline-block ${role.bg}-500 text-white rounded-lg px-4 py-2 hover:${role.bg}-600`}
                 >
                     {role.action}
-                </a>
+                </Link>
             </div>
         </>
     )
