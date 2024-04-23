@@ -1,4 +1,13 @@
+import { useState } from "react";
+import {FaMapMarker} from 'react-icons/fa';
+
 const CourseList = ({ course }) => {
+
+    const [showFullDescription, setShowFullDescription] = useState(false);
+    let description = course.description;
+
+    if (!showFullDescription)
+        description = description.substring(0, 90) + '...';
     return (
         <>
             <div className="bg-white rounded-xl shadow-md relative">
@@ -8,18 +17,29 @@ const CourseList = ({ course }) => {
                         <div className="text-gray-600 my-2">{course.type}</div>
                     </div>
 
-                    <div className="mb-5">
-                        {course.description}
-                    </div>
+                    <div className="mb-5">{description}</div>
 
-                    <h3 className="text-red-500 mb-2"> {course.price}</h3>
+                    <button 
+                        onClick={() => setShowFullDescription((prevState) => !prevState)}
+                        className="text-red-400 mb-2 hover:text-red-700">
+                        {!showFullDescription ? 'More' : 'Less'}
+                    </button>
+
+                    <h3 className="text-red-500 mb-2 font-bold"> {course.price}</h3>
 
                     <div className="border border-gray-100 mb-5"></div>
                     <div className="flex flex-col lg:flex-row justify-between mb-4">
-                        <div className="text-orange-700 mb-3">
-                            <i className="fa-solid fa-location-dot text-lg"></i>
+                        <div className="text-red-700 mb-3">
+                            <FaMapMarker className="inline text-lg mb-1 mr-1" />
                             {course.location}
                         </div>
+
+                        <a
+                            href="/add-course"
+                            className={`inline-block bg-red-500 text-white rounded-lg px-4 py-2 hover:bg-red-600`}
+                        >
+                            Read More
+                        </a>
                     </div>
                 </div>
             </div>

@@ -12,7 +12,7 @@ const roles = [
         title: 'For Students',
         description: 'Browse our specialized lessons and start today',
         action: 'Search course',
-        bg: 'bg-gray'
+        bg: 'bg-zinc'
     }
 ]
 

@@ -24,17 +24,17 @@ const Navbar = () => {
                             <div className="md:ml-auto">
                                 <div className="flex space-x-2">
                                     <a
-                                        href="/index.html"
+                                        href="/index"
                                         className="text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                                     >Home</a
                                     >
                                     <a
-                                        href="/course.html"
+                                        href="/course"
                                         className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                                     >Courses</a
                                     >
                                     <a
-                                        href="/add-course.html"
+                                        href="/add-course"
                                         className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                                     >Add Course</a
                                     >

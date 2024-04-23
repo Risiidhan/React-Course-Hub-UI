@@ -7,7 +7,7 @@ const RoleCard = (role) => {
                     {role.description}
                 </p>
                 <a
-                    href="/add-course.html"
+                    href="/add-course"
                     className={`inline-block ${role.bg}-500 text-white rounded-lg px-4 py-2 hover:${role.bg}-600`}
                 >
                     {role.action}
