@@ -1,0 +1,81 @@
+[
+    {
+      "id": "1",
+      "title": "React Fundamentals",
+      "type": "Online Course",
+      "description": "Learn the fundamentals of React.js and build interactive user interfaces with this comprehensive online course.",
+      "location": "Online",
+      "price": "$49.99",
+      "instructor": {
+        "name": "John Smith",
+        "bio": "John Smith is a seasoned software engineer with extensive experience in building web applications using React.js. He is passionate about teaching and has helped thousands of students worldwide to master React.",
+        "contactEmail": "john@example.com"
+      }
+    },
+    {
+      "id": "2",
+      "title": "Advanced React Techniques",
+      "type": "In-Person Workshop",
+      "description": "Take your React skills to the next level with this intensive workshop. Learn advanced techniques for state management, performance optimization, and more.",
+      "location": "New York, NY",
+      "price": "$299.99",
+      "instructor": {
+        "name": "Emily Johnson",
+        "bio": "Emily Johnson is a senior software engineer and React expert. She has worked on numerous React projects and is passionate about sharing her knowledge with others.",
+        "contactEmail": "emily@example.com"
+      }
+    },
+    {
+      "id": "3",
+      "title": "React Native Crash Course",
+      "type": "Online Course",
+      "description": "Get up to speed quickly with React Native and build cross-platform mobile apps with this crash course. No prior React or mobile development experience required.",
+      "location": "Online",
+      "price": "$29.99",
+      "instructor": {
+        "name": "Michael Brown",
+        "bio": "Michael Brown is a mobile app developer with expertise in React Native. He has developed multiple apps for both iOS and Android platforms.",
+        "contactEmail": "michael@example.com"
+      }
+    },
+    {
+      "id": "4",
+      "title": "React Testing Essentials",
+      "type": "Online Course",
+      "description": "Learn how to write comprehensive tests for your React applications using popular testing libraries such as Jest and React Testing Library.",
+      "location": "Online",
+      "price": "$39.99",
+      "instructor": {
+        "name": "Sarah Lee",
+        "bio": "Sarah Lee is a software engineer with a focus on testing and quality assurance. She is passionate about writing clean, maintainable code and ensuring software reliability through thorough testing.",
+        "contactEmail": "sarah@example.com"
+      }
+    },
+    {
+      "id": "5",
+      "title": "React Hooks Masterclass",
+      "type": "Online Course",
+      "description": "Unlock the power of React Hooks and revolutionize your React development workflow with this comprehensive masterclass.",
+      "location": "Online",
+      "price": "$59.99",
+      "instructor": {
+        "name": "David Garcia",
+        "bio": "David Garcia is a front-end developer and React enthusiast. He enjoys exploring new features and techniques in React and sharing his knowledge with the community.",
+        "contactEmail": "david@example.com"
+      }
+    },
+    {
+      "id": "6",
+      "title": "React Router Deep Dive",
+      "type": "Online Course",
+      "description": "Dive deep into React Router and learn how to build dynamic, single-page applications with smooth navigation and user-friendly URLs.",
+      "location": "Online",
+      "price": "$49.99",
+      "instructor": {
+        "name": "Jessica Martinez",
+        "bio": "Jessica Martinez is a full-stack developer specializing in front-end technologies. She has extensive experience with React Router and enjoys teaching others how to leverage its features effectively.",
+        "contactEmail": "jessica@example.com"
+      }
+    }
+  ]
+  
