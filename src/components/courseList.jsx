@@ -36,7 +36,7 @@ const CourseList = ({ course }) => {
                         </div>
 
                         <Link
-                            to="/add-course"
+                            to={`/jobs/${course.id}`}
                             className={`inline-block bg-red-500 text-white rounded-lg px-4 py-2 hover:bg-red-600`}
                         >
                             Read More
