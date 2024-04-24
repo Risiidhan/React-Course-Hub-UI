@@ -9,7 +9,7 @@ const RoleCard = (role) => {
                     {role.description}
                 </p>
                 <Link
-                    to="/add-course"
+                    to={role.to}
                     className={`inline-block ${role.bg}-500 text-white rounded-lg px-4 py-2 hover:${role.bg}-600`}
                 >
                     {role.action}

@@ -5,6 +5,7 @@ const roles = [
         title: 'For Teachers',
         description: 'Add your lessons here to help Students',
         action: 'Add course',
+        to: 'add-course',
         bg: 'bg-red'
     },
     {
@@ -12,6 +13,7 @@ const roles = [
         title: 'For Students',
         description: 'Browse our specialized lessons and start today',
         action: 'Search course',
+        to: 'course',
         bg: 'bg-zinc'
     }
 ]
