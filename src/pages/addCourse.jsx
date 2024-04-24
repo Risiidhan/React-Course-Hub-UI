@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const AddCoursePage = () => {
+const AddCoursePage = ({submitCourse}) => {
     const [type, setType] = useState('')
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
@@ -10,6 +11,27 @@ const AddCoursePage = () => {
     const [bio, setBio] = useState('')
     const [contactEmail, setContactEmail] = useState('')
 
+    const nav = useNavigate();
+    const submitForm = (e) => {
+        e.preventDefault();
+
+        const newCourse = {
+            title,
+            type,
+            description,
+            location,
+            price,
+            instructor: {
+                name,
+                bio,
+                contactEmail
+            }
+        }
+
+        submitCourse(newCourse);
+        nav('/course');
+    }
+
     return (
         <>
             <section className="bg-red-50">
@@ -17,7 +39,7 @@ const AddCoursePage = () => {
                     <div
                         className="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0"
                     >
-                        <form>
+                        <form onSubmit={submitForm}>
                             <h2 className="text-3xl text-center font-semibold mb-6">Add Course</h2>
 
                             <div className="mb-4">
@@ -32,6 +54,7 @@ const AddCoursePage = () => {
                                     value={type}
                                     onChange={(e) => setType(e.target.value)}
                                 >
+                                    <option value="">Select Course</option>
                                     <option value="Full-Time">Online Course</option>
                                     <option value="Part-Time">In-Person Workshop</option>
                                 </select>
@@ -65,7 +88,7 @@ const AddCoursePage = () => {
                                     rows="4"
                                     placeholder="Add any course desciption"
                                     value={description}
-                                    onInput={(e) => setDescription(e.description.value)}
+                                    onInput={(e) => setDescription(e.target.value)}
                                 ></textarea>
                             </div>
 
@@ -81,6 +104,7 @@ const AddCoursePage = () => {
                                     value={price}
                                     onChange={(e) => setPrice(e.target.value)}
                                 >
+                                    <option value="">Select Price</option>
                                     <option value="Under $5">Under $5</option>
                                     <option value="$5 - 6">$5 - $10</option>
                                     <option value="$9 - 10">$10 - $50</option>
@@ -156,7 +180,7 @@ const AddCoursePage = () => {
                                     placeholder="Email address for applicants"
                                     required
                                     value={contactEmail}
-                                    onInput={(e) => setContactEmail(e.tcontactEmail.value)}
+                                    onInput={(e) => setContactEmail(e.target.value)}
                                 />
                             </div>
 

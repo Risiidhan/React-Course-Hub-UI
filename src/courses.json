@@ -1,5 +1,5 @@
 {
-  "course" : [
+  "course": [
     {
       "id": "1",
       "title": "React Fundamentals",
@@ -76,6 +76,19 @@
         "name": "Jessica Martinez",
         "bio": "Jessica Martinez is a full-stack developer specializing in front-end technologies. She has extensive experience with React Router and enjoys teaching others how to leverage its features effectively.",
         "contactEmail": "jessica@example.com"
+      }
+    },
+    {
+      "id": "2f91",
+      "title": "React Redux",
+      "type": "Full-Time",
+      "description": "learn latest redux features  ",
+      "location": "online",
+      "price": "$9 - 10",
+      "instructor": {
+        "name": "Dhoni",
+        "bio": "test dhoni",
+        "contactEmail": "dhoni@gmail.com"
       }
     }
   ]
