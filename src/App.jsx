@@ -19,12 +19,20 @@ const App = () => {
     });
     return
   };
+
+  const deleteCourse = async (id) => {
+    const res = await fetch(`/api/${id}`, {
+      method : 'DELETE',
+    });
+    return
+  }
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage />} />
         <Route path="/course" element={<CoursePage />} />
-        <Route path="/course/:id" element={<CourseDetailPage />} loader={courseLoader} />
+        <Route path="/course/:id" element={<CourseDetailPage deleteCourse={deleteCourse} />} loader={courseLoader} />
         <Route path="/add-course" element={<AddCoursePage submitCourse={addCourse} />} />
         <Route path="*" element={<NotFoundPage />} />
 

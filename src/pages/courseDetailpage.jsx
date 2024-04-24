@@ -1,10 +1,28 @@
-import { useParams, useLoaderData } from "react-router-dom";
+import { useParams, useLoaderData, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { FaArrowCircleLeft, FaMapMarked} from "react-icons/fa"
+import { FaArrowCircleLeft, FaMapMarked } from "react-icons/fa"
+import { toast } from "react-toastify";
+import NotFoundPage from "./notFoundPage";
 
-const CourseDetailPage = () => {
+const CourseDetailPage = ({ deleteCourse }) => {
+    const nav = useNavigate();
     const { id } = useParams();
     const course = useLoaderData();
+
+    const remCourse = (id) => {
+        window.confirm('Do you want to delete this course?');
+
+        if (!confirm) return;
+        deleteCourse(id);
+        toast.success('Course Deleted Successfully');
+        nav('/course');
+    }
+
+    if (!course) {
+        return (
+            <NotFoundPage />
+        );
+    }
 
     return (
         <>
@@ -82,6 +100,7 @@ const CourseDetailPage = () => {
                                 >
                                 <button
                                     className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
+                                    onClick={() => remCourse(course.id)}
                                 >
                                     Delete Course
                                 </button>
@@ -96,6 +115,9 @@ const CourseDetailPage = () => {
 
 const courseLoader = async ({ params }) => {
     const res = await fetch(`/api/${params.id}`)
+    if(res.status === 404){
+        return null;
+    }
     const data = await res.json();
     return data;
 }
