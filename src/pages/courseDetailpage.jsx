@@ -14,7 +14,6 @@ const CourseDetailPage = ({ deleteCourse }) => {
 
         if (!confirm) return;
         deleteCourse(id);
-        toast.success('Course Deleted Successfully');
         nav('/course');
     }
 

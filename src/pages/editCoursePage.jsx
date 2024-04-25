@@ -33,7 +33,6 @@ const EditCoursePage = ({ submitCourse }) => {
         }
 
         let res = submitCourse(updatedCourse);
-        toast.success('Course Updated Successfully');
         nav(`/course/${id}`);
     }
     return (

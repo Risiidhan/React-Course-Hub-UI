@@ -30,7 +30,6 @@ const AddCoursePage = ({submitCourse}) => {
         }
 
         submitCourse(newCourse);
-        toast.success('Course Added Successfully!')
         nav('/course');
     }
 
