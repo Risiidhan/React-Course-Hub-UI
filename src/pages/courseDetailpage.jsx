@@ -29,17 +29,17 @@ const CourseDetailPage = ({ deleteCourse }) => {
                 <div className="container m-auto py-6 px-6">
                     <Link
                         to="/course"
-                        className="text-red-500 hover:text-red-600 flex items-center"
+                        className="text-cyan-700 hover:text-cyan-600 flex items-center"
                     >
                         <FaArrowCircleLeft className="mr-2" />
                         Back to Course Listings
                     </Link>
                 </div>
             </section>
-            <section className="bg-red-50">
+            <section className="bg-cyan-50">
                 <div className="container m-auto py-10 px-6">
-                    <div className="grid grid-cols-1 md:grid-cols-70/30 w-full gap-6">
-                        <main>
+                    <div className="grid grid-cols-3 gap-4">
+                        <main className="col-span-2">
                             <div
                                 className="bg-white p-6 rounded-lg shadow-md text-center md:text-left"
                             >
@@ -50,13 +50,13 @@ const CourseDetailPage = ({ deleteCourse }) => {
                                 <div
                                     className="text-gray-500 mb-4 flex align-middle justify-center md:justify-start"
                                 >
-                                    <FaMapMarked className="mr-2 text-lg text-orange-700" />
-                                    <p className="text-orange-700">{course.location}</p>
+                                    <FaMapMarked className="mr-2 text-lg text-teal-700" />
+                                    <p className="text-teal-700">{course.location}</p>
                                 </div>
                             </div>
 
                             <div className="bg-white p-6 rounded-lg shadow-md mt-6">
-                                <h3 className="text-red-800 text-lg font-bold mb-6">
+                                <h3 className="text-cyan-800 text-lg font-bold mb-6">
                                     Course Description
                                 </h3>
 
@@ -64,13 +64,13 @@ const CourseDetailPage = ({ deleteCourse }) => {
                                     {course.description}
                                 </p>
 
-                                <h3 className="text-red-800 text-lg font-bold mb-2">Price</h3>
+                                <h3 className="text-cyan-800 text-lg font-bold mb-2">Price</h3>
 
                                 <p className="mb-4">{course.price}</p>
                             </div>
                         </main>
 
-                        <aside>
+                        <aside className="col-span-1">
                             <div className="bg-white p-6 rounded-lg shadow-md">
                                 <h3 className="text-xl font-bold mb-6">Instructor Info</h3>
 
@@ -84,7 +84,7 @@ const CourseDetailPage = ({ deleteCourse }) => {
 
                                 <h3 className="text-xl">Contact Email:</h3>
 
-                                <p className="my-2 bg-red-100 p-2 font-bold">
+                                <p className="my-2 bg-cyan-100 p-2 font-bold">
                                     {course.instructor.contactEmail}
                                 </p>
 
@@ -98,7 +98,7 @@ const CourseDetailPage = ({ deleteCourse }) => {
                                 >Edit Course</Link
                                 >
                                 <button
-                                    className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
+                                    className="bg-cyan-900 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
                                     onClick={() => remCourse(course.id)}
                                 >
                                     Delete Course

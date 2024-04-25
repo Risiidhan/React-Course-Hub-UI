@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-image {
+    background-image: url('./assets/images/react-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card-image {
+    background-image: url('./assets/images/wallpaper-reactjs.jpg');
+    background-size: cover;
+    background-position: center;
+}

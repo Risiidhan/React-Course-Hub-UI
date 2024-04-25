@@ -6,7 +6,7 @@ const roles = [
         description: 'Add your lessons here to help Students',
         action: 'Add course',
         to: 'add-course',
-        bg: 'bg-red'
+        bg: 'bg-cyan'
     },
     {
         id: 2,

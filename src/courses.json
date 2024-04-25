@@ -77,19 +77,6 @@
         "bio": "Jessica Martinez is a full-stack developer specializing in front-end technologies. She has extensive experience with React Router and enjoys teaching others how to leverage its features effectively.",
         "contactEmail": "jessica@example.com"
       }
-    },
-    {
-      "id": "337d",
-      "title": "Test Course Name",
-      "type": "Online Course",
-      "description": "test Course de",
-      "location": "test Course loc",
-      "price": "$12",
-      "instructor": {
-        "name": "test Course In",
-        "bio": "test Course in des",
-        "contactEmail": "dhoni@gmail.com"
-      }
     }
   ]
 }
