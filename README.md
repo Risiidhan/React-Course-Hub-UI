@@ -1,7 +1,9 @@
 # React + Vite
 
-![React Logo](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg)
-![Vite Logo](https://vitejs.dev/logo.svg)
+<div align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Logo" width="100" height="100">
+  <img src="https://vitejs.dev/logo.svg" alt="Vite Logo" width="100" height="100">
+</div>
 
 ## React Course Hub
 
