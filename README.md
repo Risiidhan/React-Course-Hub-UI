@@ -1,5 +1,8 @@
 # React + Vite
 
+![React Logo](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg)
+![Vite Logo](https://vitejs.dev/logo.svg)
+
 ## React Course Hub
 
 This project was bootstrapped with Vite and React, and it includes the following features:
