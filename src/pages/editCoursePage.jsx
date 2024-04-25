@@ -1,22 +1,25 @@
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const AddCoursePage = ({submitCourse}) => {
-    const [type, setType] = useState('')
-    const [title, setTitle] = useState('')
-    const [description, setDescription] = useState('')
-    const [location, setLocation] = useState('')
-    const [price, setPrice] = useState('')
-    const [name, setName] = useState('')
-    const [bio, setBio] = useState('')
-    const [contactEmail, setContactEmail] = useState('')
+const EditCoursePage = ({ submitCourse }) => {
 
+    const course = useLoaderData();
+    const [type, setType] = useState(course.type)
+    const [title, setTitle] = useState(course.title)
+    const [description, setDescription] = useState(course.description)
+    const [location, setLocation] = useState(course.location)
+    const [price, setPrice] = useState(course.price)
+    const [name, setName] = useState(course.instructor.name)
+    const [bio, setBio] = useState(course.instructor.bio)
+    const [contactEmail, setContactEmail] = useState(course.instructor.contactEmail)
+    const id = course.id;
     const nav = useNavigate();
     const submitForm = (e) => {
         e.preventDefault();
 
-        const newCourse = {
+        const updatedCourse = {
+            id,
             title,
             type,
             description,
@@ -29,11 +32,10 @@ const AddCoursePage = ({submitCourse}) => {
             }
         }
 
-        submitCourse(newCourse);
-        toast.success('Course Added Successfully!')
-        nav('/course');
+        let res = submitCourse(updatedCourse);
+        toast.success('Course Updated Successfully');
+        nav(`/course/${id}`);
     }
-
     return (
         <>
             <section className="bg-red-50">
@@ -42,7 +44,7 @@ const AddCoursePage = ({submitCourse}) => {
                         className="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0"
                     >
                         <form onSubmit={submitForm}>
-                            <h2 className="text-3xl text-center font-semibold mb-6">Add Course</h2>
+                            <h2 className="text-3xl text-center font-semibold mb-6">Edit Course</h2>
 
                             <div className="mb-4">
                                 <label htmlFor="type" className="block text-gray-700 font-bold mb-2"
@@ -183,7 +185,7 @@ const AddCoursePage = ({submitCourse}) => {
                                     className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
                                     type="submit"
                                 >
-                                    Add Course
+                                    Edit Course
                                 </button>
                             </div>
                         </form>
@@ -194,4 +196,5 @@ const AddCoursePage = ({submitCourse}) => {
     )
 }
 
-export default AddCoursePage;
+
+export default EditCoursePage;
